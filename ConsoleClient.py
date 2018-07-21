@@ -1,5 +1,9 @@
 from SQLServerOperations import SQLServerOperations
+from SpreadsheetOperations import SpreadsheetOperations
 
 if __name__ == "__main__":
     sql_server_operations = SQLServerOperations()
-    sql_server_operations.read_all_records("Customers")
+    spreadsheet_operations = SpreadsheetOperations()
+    # sql_server_operations.read_all_records("GDPIndex")
+    sql_server_operations.insert_required_records(spreadsheet_operations)
+    print("Records inserted successfully.")
