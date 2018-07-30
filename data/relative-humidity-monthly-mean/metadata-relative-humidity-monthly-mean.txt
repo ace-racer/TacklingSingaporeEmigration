@@ -1,0 +1,51 @@
+# Metadata for Relative Humidity - Monthly Mean
+---
+Identifier: '0ed35751-3729-43b4-91f4-9aa587b030c8'
+Name: 'relative-humidity-monthly-mean'
+Title: 'Relative Humidity - Monthly Mean'
+Description: 'The monthly mean relative humidity recorded at the Changi Climate Station.'
+Topics:
+  - 'Environment'
+Keywords:
+  - 'Climate'
+  - 'Humidity'
+  - 'NEA'
+  - 'Weather'
+Publisher:
+  Name: 'National Environment Agency'
+  Admin 1:
+    Name: 'Ong Chin Hong'
+    Department: 'CCRS'
+    Email: 'ong_chin_hong@nea.gov.sg'
+  Admin 2:
+    Name: 'Ang Chieng Hai'
+    Department: 'CCRS'
+    Email: 'ang_chieng_hai@nea.gov.sg'
+Sources:
+  - 'National Environment Agency'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Monthly'
+Coverage: '1982-01-01 to 2018-06-30'
+Last Updated: '2018-07-26T09:41:14.923818'
+Resources:
+  -
+    Identifier: '4631174f-9858-463d-8a88-f3cb21588c67'
+    Title: 'Relative Humidity - Monthly Mean'
+    Url: 'https://storage.data.gov.sg/relative-humidity-monthly-mean/resources/relative-humidity-monthly-mean-2018-07-26T09-41-14Z.csv'
+    Format: 'CSV'
+    Coverage: '1982-01-01 to 2018-06-30'
+    Last Updated: '2018-07-26T09:41:14.395996'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'mean_rh'
+        Title: 'Monthly mean relative humidity'
+        Type: 'numeric'
+        Sub Type: 'percentage'
+        Description: 'Percentages are expressed as a value over 100, i.e. "100" represents
+          100%'

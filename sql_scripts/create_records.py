@@ -3,7 +3,7 @@ import numpy as np
 
 final_year = 2017
 
-df = pd.read_csv("../data/gdp_pc_ppp_usa_uk.csv", encoding = "ISO-8859-1")
+df = pd.read_csv("../data/population_density.csv", encoding = "ISO-8859-1")
 headers = df.columns.values
 print(headers)
 queries = ""
@@ -15,7 +15,7 @@ for idx, row in df.iterrows():
             value = (row[date_id])
             if value and not pd.isnull(value):
                 value = "{:0.3f}".format(value)
-                queries += "update dimeconomy set purchasingpowerindex = {0} where countryid = {1} and timeid = {2};\n".format(value, countryid, date_id)
+                queries += "insert into dimcountryinfo (pop_density, timeid, countryid) values({0}, {1}, {2});\n".format(value, date_id, countryid)
 
-with open("ppp_queries.sql", "w") as fw:
+with open("pop_density_queries.sql", "w") as fw:
     fw.writelines(queries)
