@@ -1,3 +1,3 @@
 target_connection_string: "Driver={SQL Server Native Client 11.0};Server=.;Database=SingaporeEmigration;Trusted_Connection=yes;"
-source_file_location: "data/gdp_indices.csv"
-table_name: gdpindex
+source_file_location: "data/economy_new.csv"
+table_name: dimeconomy
