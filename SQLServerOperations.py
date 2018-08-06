@@ -58,7 +58,18 @@ class SQLServerOperations(BaseOperations):
                     for _, row in input_df.iterrows():
                         query_values = []
                         for column_idx in range(len(column_names)):
+                            timeid = None
+                            countryid = None
                             query_value = str(row[column_names[column_idx]])
+                            
+                            # get the value of the time id
+                            if column_names[column_idx] == self.TIMEID_STR:
+                                timeid = query_value
+                            
+                            # get the value of the country id
+                            if column_names[column_idx] == self.COUNTRYID_STR:
+                                countryid = query_value
+                            
                             if self.compiled_pattern_for_real_values.match(query_value):
                                 query_values.append(query_value)
                             else:
@@ -66,7 +77,7 @@ class SQLServerOperations(BaseOperations):
                         
                         query_values_appended = ",".join(query_values)
                         insert_query = self.insert_query_template.format(table_name, insert_query_columns, query_values_appended)
-                        insert_queries.append(insert_query)
+                        insert_queries.append((insert_query, timeid, countryid))
 
                     self.insert_new_records(insert_queries)
             except Exception as ex:

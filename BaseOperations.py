@@ -5,6 +5,8 @@ import errno
 class BaseOperations:
     def __init__(self):
         self.configurations = None
+        self.TIMEID_STR = "timeid"
+        self.COUNTRYID_STR = "countryid"
         CONFIGURATION_FILE_NAME = "configurations.yaml"
 
         if not os.path.exists(CONFIGURATION_FILE_NAME):
