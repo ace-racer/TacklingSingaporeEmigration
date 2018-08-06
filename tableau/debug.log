@@ -50,3 +50,6 @@
 [0805/144429:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
 [0805/144635:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
 [0805/144726:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
+[0806/144613:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
+[0806/144613:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
+[0806/150049:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
